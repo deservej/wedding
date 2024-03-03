@@ -376,11 +376,11 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 }
 .com-btn:first-child{margin-left:0;}
 .com-btn.tel{
-	background-image:url("/mobile/new_m/mcard/images/common/icon_tel.png");
+	background-image:url("../images/icon_tel.png");
 	background-size:1rem auto;
 }
 .com-btn.sms{
-	background-image:url("/mobile/new_m/mcard/images/common/icon_sms.png");
+	background-image:url("../images/icon_sms.png");
 	background-size:1rem auto;
 }
 .com-btn.acc{
@@ -864,7 +864,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 	display:block;
 	width:2.250rem;
 	height:2.250rem;
-	background:#333 url("/mobile/new_m/mcard/images/common/icon_tel.png") 50% 50% no-repeat;
+	background:#333 url("../images/icon_tel.png") 50% 50% no-repeat;
 	background-size:1rem;
 	font-size:0;
 	line-height:0;
