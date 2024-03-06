@@ -1,0 +1,117 @@
+diff a/index.html b/index.html	(rejected hunks)
+@@ -3,10 +3,10 @@
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Document</title>
++  <title>병주&보람, 결혼 합니다. </title>
+ 
+     <meta charset="euc-kr">
+-    <title>잇츠카드 모바일 청첩장</title>
++    <title>W</title>
+     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,target-densitydpi=medium-dpi" />
+     <meta name="format-detection" content="telephone=no" />
+     <meta property="og:type" content="website">
+@@ -38,6 +38,27 @@
+       }
+       #wrapper .greeting-section {margin-top: -2rem;}
+       #wrapper .sec-tit:after {height: 0.4px;}
++      .accountCopy .form .btn {
++          background: #5b1eaa;
++          color: #fff;
++          height: 2.5rem;
++          width: 2.9rem;
++          font-size: 0.813rem;
++          font-family: 'Noto Sans KR';
++      }
++     .pop-body-add .group > div  {
++        display: flex;
++        justify-content: space-between;
++      }
++      .accountCopy .form .btn {
++          background: #5b1eaa;
++          color: #fff;
++          height: 2.5rem;
++          width: 2.9rem;
++          font-size: 0.813rem;
++          font-family: 'Noto Sans KR';
++          flex-shrink: 0;
++      }
+     </style>
+ </head>
+ <body>
+@@ -63,7 +84,8 @@
+           <section class="visual-section ">
+             <div class="">
+               <div class="vertical-item photo main-img">
+-                <img src="images/main_img_1.png?v0.2" alt="">
++                <!-- <img src="images/main_img_1.png?v0.2" alt=""> -->
++                <img src="images/main_black.png" alt="">
+               </div>
+               <div class="vertical-item info">
+                 <!-- <p class="p1">
+@@ -171,8 +193,8 @@
+                 <div class="box">
+                   <div class="name"><span>어머니</span> <strong>윤주희</strong></div>
+                   <div class="honju-btn">
+-                    <a href="javascript:pcAlert();" class="com-btn tel sl">연락하기</a>
+-                    <a href="javascript:pcAlert();" class="com-btn sms">문자보내기</a>
++                    <a href="tel:01075092014" class="com-btn tel sl">연락하기</a>
++                    <a href="sms:01075092014" class="com-btn sms">문자보내기</a>
+                   </div>
+                 </div>
+               </div>
+@@ -552,28 +574,29 @@
+       <div class="pop-wrap accountCopy" id="accountCopyG">
+         <div class="pop-inner">
+           <div class="pop-head">신랑측 계좌번호</div>
+-          <div class="pop-body">
++          <div class="pop-body pop-body-add">
+             <div class="form">
+               <form action="">
+                 <div class="group col-2 first">
+                   <div>
+-                    국민은행
++                    농협은행
+                   </div>
+                   <div>
+-                    <span>예금주 : </span> 이석훈
++                    <span>예금주 : </span> 김창곤
+                   </div>
+                 </div>
+                 <div class="group">
+                   <div>
+-                    <input name="GBankNum1" id="GBankNum1" class="input" readonly value="000-123-456789"><button type="button" class="btn" onclick="jsCopyLink('000-123-456789', 'accountCopyG')">복사</button>
++                    <input name="GBankNum1" id="GBankNum1" class="input" readonly value="45302956-123-456789">
++                    <button type="button" class="btn" onclick="jsCopyLink('45302956-123-456789', 'accountCopyG')">복사</button>
+                   </div>
+                 </div>			
+                 <div class="group col-2">
+                   <div>
+-                    국민은행
++                    농협은행
+                   </div>
+                   <div>
+-                    <span>예금주 : </span> 이석훈
++                    <span>예금주 : </span> 윤주희
+                   </div>
+                 </div>
+                 <div class="group">
+@@ -591,7 +614,7 @@
+       <div class="pop-wrap accountCopy" id="accountCopyB">
+         <div class="pop-inner">
+           <div class="pop-head">신부측 계좌번호</div>
+-          <div class="pop-body">
++          <div class="pop-body pop-body-add">
+             <div class="form">
+               <form action="">
+                 <div class="group col-2 first">
+@@ -637,7 +660,7 @@
+                   <div>
+                     <div class="tit">계좌번호가 복사되었습니다.</div>
+                     <div class="bkinfo">
+-                      <span>국민은행 000-123-456789</span><br><span>예금주 이석훈</span>
++                      <span>농협은행<br> 45302956-123-456789</span><br><span>예금주 김창곤</span>
+                     </div>								
+                   </div>
+                 </div>
