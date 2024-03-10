@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,target-densitydpi=medium-dpi" />
     <meta name="format-detection" content="telephone=no" />
     <meta property="og:type" content="website">
-    <meta property="og:image" content=""> <!-- Link Image -->
+    <meta property="og:image" content="https://glittering-sundae-b5c268.netlify.app/images/thum.jpg"> <!-- Link Image -->
     <meta property="og:title" content=""> <!-- Link Title -->
     <meta property="og:description" content=""> <!-- Link Text -->
     <meta property="og:url" content=""> <!-- Link URL -->
@@ -85,7 +85,7 @@
             <div class="">
               <div class="vertical-item photo main-img">
                 <!-- <img src="images/main_black.png" alt=""> -->
-                <!-- <img src="images/main_img_1.png?v0.2" alt=""> -->
+                <img src="images/main_img_1.png?v0.3" alt="">
               </div>
               <div class="vertical-item info">
                 <!-- <p class="p1">
@@ -203,15 +203,15 @@
                 <div class="box first">
                   <div class="name"><span>아버지</span> <strong>임점진</strong></div>
                   <div class="honju-btn">
-                    <a href="javascript:pcAlert();" class="com-btn tel sb">연락하기</a>
-                    <a href="javascript:pcAlert();" class="com-btn sms">문자보내기</a>
+                    <a href="tel:01075092014" class="com-btn tel sb">연락하기</a>
+                    <a href="sms:01075092014" class="com-btn sms">문자보내기</a>
                   </div>
                 </div>
                 <div class="box">
                   <div class="name"><span>어머니</span> <strong>추선옥</strong></div>
                   <div class="honju-btn">
-                    <a href="javascript:pcAlert();" class="com-btn tel sb">연락하기</a>
-                    <a href="javascript:pcAlert();" class="com-btn sms">문자보내기</a>
+                    <a href="tel:01075092014" class="com-btn tel sb">연락하기</a>
+                    <a href="sms:01075092014" class="com-btn sms">문자보내기</a>
                   </div>
                 </div>
               </div>
@@ -603,7 +603,8 @@
                 </div>
                 <div class="group">
                   <div>
-                    <input name="GBankNum2" id="GBankNum2" class="input" readonly value="000-123-456789"><button type="button" class="btn">복사</button>
+                    <input name="GBankNum2" id="GBankNum2" class="input" readonly value="453029-56-198067">
+                    <button type="button" class="btn" onclick="jsCopyLink1('453029-56-198067', 'accountCopyG')">복사</button>
                   </div>
                 </div>			
               </form>
@@ -624,12 +625,12 @@
                     국민은행
                   </div>
                   <div>
-                    <span>예금주 : </span> 이석훈
+                    <span>예금주 : </span> 임점진
                   </div>
                 </div>
                 <div class="group">
                   <div>
-                    <input name="BBankNum1" id="BBankNum1" class="input" readonly value="000-123-456789"><button type="button" class="btn">복사</button>
+                    <input name="BBankNum1" id="BBankNum1" class="input" readonly value="258256-12-368745"><button type="button" class="btn">복사</button>
                   </div>
                 </div>			
                 <div class="group col-2">
@@ -637,12 +638,12 @@
                     국민은행
                   </div>
                   <div>
-                    <span>예금주 : </span> 이석훈
+                    <span>예금주 : </span> 추선옥
                   </div>
                 </div>
                 <div class="group">
                   <div>
-                    <input name="BBankNum2" id="BBankNum2" class="input" readonly value="000-123-456789"><button type="button" class="btn">복사</button>
+                    <input name="BBankNum2" id="BBankNum2" class="input" readonly value="258256-12-659210"><button type="button" class="btn">복사</button>
                   </div>
                 </div>			
               </form>
@@ -652,6 +653,7 @@
         </div>
       </div>
     
+      <!-- 김창곤 -->
       <div class="pop-wrap copyComplete" id="copyComplete">
         <div class="pop-inner">			
           <div class="pop-body">
@@ -669,6 +671,31 @@
               </div>
               <div class="buttons">	
                 <a href="javascript:void(0);" class="btn" onclick="popClose('copyComplete')">확인</a>
+              </div>
+            </form>
+            </div>
+          </div>			
+        </div>
+      </div>
+
+      <!-- 윤주희 -->
+      <div class="pop-wrap copyComplete" id="copyComplete1">
+        <div class="pop-inner">			
+          <div class="pop-body">
+            <div class="form">
+            <form action="">
+              <div class="con">
+                <div class="group">
+                  <div>
+                    <div class="tit">계좌번호가 복사되었습니다.</div>
+                    <div class="bkinfo">
+                      <span>농협은행<br>453029-56-198067</span><br><span>예금주 윤주희</span>
+                    </div>								
+                  </div>
+                </div>
+              </div>
+              <div class="buttons">	
+                <a href="javascript:void(0);" class="btn" onclick="popClose('copyComplete1')">확인</a>
               </div>
             </form>
             </div>
@@ -922,6 +949,21 @@
           document.body.removeChild(tmpTextarea);
           popClose(id);
           popOpen('0 1rem','copyComplete');			
+          //alert("URL 복사가 완료되었습니다."); 					  
+        }
+
+        function jsCopyLink1(copyText, id) {            
+          var tmpTextarea = document.createElement('textarea');
+          tmpTextarea.value = copyText;
+         
+          document.body.appendChild(tmpTextarea);
+          tmpTextarea.select();
+          tmpTextarea.setSelectionRange(0, 9999);  // 셀렉트 범위 설정
+         
+          document.execCommand('copy');
+          document.body.removeChild(tmpTextarea);
+          popClose(id);
+          popOpen('0 1rem','copyComplete1');			
           //alert("URL 복사가 완료되었습니다."); 					  
         }
     
